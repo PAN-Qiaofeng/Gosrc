@@ -42,7 +42,49 @@ func main() {
 
 	testString := "We are in the same world"
 
+	sliceByte := []rune(testString)
+
+	sliceByte[0] = '我'
+
 	fmt.Println(testString)
+
+	slByString := string(sliceByte)
+
+	fmt.Printf("%v \n", slByString)
+
+	newString := testString + slByString
+
+	fmt.Println(newString)
+
+	fmt.Printf("%T \n", newString)
+
+	var twoDeArray [2][3]int
+
+	fmt.Println(twoDeArray)
+
+	for i := 0; i < len(twoDeArray); i++ {
+		for j := 0; j < len(twoDeArray[i]); j++ {
+			fmt.Println(twoDeArray[i][j])
+		}
+	}
+
+	tranInt := fmt.Sprintf("%d", a[0])
+
+	fmt.Printf("%T \n", tranInt)
+
+	mapTest := make(map[string]string)
+
+	mapTest2 := map[string]string{
+		"面试1": "面试2",
+		"腾讯1": "腾讯2",
+	}
+
+	fmt.Println(mapTest["面试1"], mapTest["腾讯2"])
+
+	delete(mapTest, "腾讯2")
+
+	fmt.Println(mapTest["腾讯2"], mapTest["面试1"])
+	fmt.Println(mapTest2["面试1"], mapTest2["腾讯1"])
 
 	panic(e)
 
