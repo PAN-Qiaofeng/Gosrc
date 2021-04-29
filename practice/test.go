@@ -15,7 +15,7 @@ import (
 
 var slice = []int{1, 2, 3, 4, 5}
 
-func main() {
+func main_01() {
 	var a [5]int
 	a[0] = 1
 	var b = [5]int{1, 2, 3, 4, 5}
